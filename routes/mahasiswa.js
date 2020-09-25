@@ -1,6 +1,6 @@
 const express = require('express')
 const route = express.Router()
-const Mahasiswa = require('../models/Mahasiswa')
+const { Mahasiswa } = require('../models/api')
 
 //Create
 route.post('/', async (req, res) => {

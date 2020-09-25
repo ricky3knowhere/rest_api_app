@@ -1,0 +1,29 @@
+{
+  "mahasiswa": [
+    {
+      "name": "Tetz",
+      "address": "Mandalajati",
+      "birth_date": "2020-09-19",
+      "id": 1
+    },
+    {
+      "name": "Tetzskjs",
+      "address": "Mandalajati",
+      "birth_date": "2020-09-19",
+      "id": 2
+    },
+    {
+      "name": "Tetzskjs",
+      "address": "Mandalajati",
+      "birth_date": "2020-09-19",
+      "id": 3
+    },
+    {
+      "name": "Tetzskjs",
+      "address": "Mandalajati",
+      "birth_date": "2020-09-19",
+      "id": 4
+    }
+  ],
+  "user": []
+}
