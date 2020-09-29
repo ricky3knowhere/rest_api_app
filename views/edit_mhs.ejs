@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Mahasiswa</title>
+  </head>
+  <body>
+    <form action="/mahasiswa/edit/<%= data.id %>" method="post">
+      Name: <input type="text" name="name" value="<%= data.name %>"><br>
+      Address: <input type="text" name="address" value="<%= data.address %>"><br>
+      Birth date: <input type="date" name="birth_date" value="<%= data.birth_date %>"><br>
+      <button type="submit">Edit</button>
+    </form>
+  </body>
+</html>

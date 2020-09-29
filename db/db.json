@@ -1,19 +1,13 @@
 {
   "mahasiswa": [
     {
-      "name": "Tetz",
-      "address": "Mandalajati",
-      "birth_date": "2020-09-19",
-      "id": 1
-    },
-    {
       "name": "Tetzskjs",
       "address": "Mandalajati",
       "birth_date": "2020-09-19",
       "id": 2
     },
     {
-      "name": "Tetzskjs",
+      "name": "Kakashi",
       "address": "Mandalajati",
       "birth_date": "2020-09-19",
       "id": 3
@@ -23,7 +17,57 @@
       "address": "Mandalajati",
       "birth_date": "2020-09-19",
       "id": 4
+    },
+    {
+      "name": "Izuna",
+      "address": "Uchiha",
+      "birth_date": "2020-09-15",
+      "id": 5
+    },
+    {
+      "name": "Izuna",
+      "address": "Uchiha",
+      "birth_date": "2020-09-15",
+      "id": 6
+    },
+    {
+      "name": "Danzo",
+      "address": "Konoha",
+      "birth_date": "2020-09-07",
+      "id": 9
+    },
+    {
+      "name": "Test",
+      "address": "USA",
+      "birth_date": "2020-09-18",
+      "id": 10
+    },
+    {
+      "name": "Asep Cakue",
+      "address": "Konoha",
+      "birth_date": "",
+      "id": 11
     }
   ],
-  "user": []
+  "user": [],
+  "phones": [
+    {
+      "name": "Samsung",
+      "brand": "Samsung",
+      "price": "6464",
+      "id": 1
+    },
+    {
+      "name": "Galaxy note 9",
+      "brand": "Samsung",
+      "price": "1200000",
+      "id": 2
+    },
+    {
+      "name": "Ychcch",
+      "brand": "Uu",
+      "price": "68",
+      "id": 3
+    }
+  ]
 }

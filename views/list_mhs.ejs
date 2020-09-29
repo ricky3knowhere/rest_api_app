@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>List Mahasiswa </title>
+</head>
+<body>
+  <h3>List Mahasiswa</h3>
+  <ul>
+    <% data.forEach(function(mhs) {
+      %>
+      <li><%= mhs.name %></li>
+      <a href="/mahasiswa/details/<%= mhs.id %>">Details</a>
+      <a href="/mahasiswa/edit/<%= mhs.id %>">Edit</a>
+      <a href="/mahasiswa/delete/<%= mhs.id %>">Delete</a>
+      <%
+    }) %>
+  </ul>
+  <a href="/">Home</a>
+</body>
+</html>

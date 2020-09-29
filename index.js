@@ -38,22 +38,56 @@ const { Mahasiswa } = require('./models/api')
 // })
 
 //Routes
-app.get('/mahasiswa', async (req, res) => {
-  const data = await Mahasiswa.list()
-  console.log(data.data)
-  res.render('list_mahasiswa.ejs', {data: data.data})
 
+app.get('/', (req, res) => {
+  res.sendFile('home.html',{root: __dirname+'/views'})
 })
 
 
+app.get('/mahasiswa', async (req, res) => {
+  const data = await Mahasiswa.list()
+  res.render('list_mhs.ejs', {data: data.data})
+
+})
+
+app.get('/mahasiswa/details/:id', async (req, res) => {
+  const id = req.params.id
+  const data = await Mahasiswa.details(id)
+  res.render('details_mhs.ejs', {data: data.data})
+
+})
 app.get('/mahasiswa/new', (req, res) => {
   res.sendFile('form_input.html',{root: __dirname+'/views'})
 })
 
-app.post('/mahasiswa', async (req, res) => {
+
+app.post('/mahasiswa/new', async (req, res) => {
   const insert = await Mahasiswa.insert(req.body)
   if(insert.status === 201)
-  redirect('/mahasiswa')
+  res.redirect('./mahasiswa/details/'+Insert.data.id)
+})
+
+
+app.get('/mahasiswa/edit/:id', async (req, res) => {
+  const id = req.params.id
+  const data = await Mahasiswa.details(id)
+  res.render('edit_mhs.ejs', {data: data.data})
+
+})
+
+app.post('/mahasiswa/edit/:id', async (req, res) => {
+  const update = await Mahasiswa.update(req.params.id, req.body)
+  if(update.status === 200)
+  res.redirect('./')
+})
+
+app.get('/mahasiswa/delete/:id', async (req, res) => {
+  const id = req.params.id
+  const del = await Mahasiswa.delete(id)
+  const data = await Mahasiswa.list()
+
+  if(del.status === 200)
+  res.render('list_mhs.ejs', {data: data.data})
 })
 
 app.get('/user/register', (req, res) => {

@@ -52,4 +52,14 @@ route.delete('/:id', async (req, res) => {
   }
 })
 
+//Details
+route.details('/:id', async (req, res) => {
+  try {
+    const data = await Mahasiswa.findOne({ _id: req.params.id })
+    res.json(data)
+  } catch(e) {
+    res.json({ message: e })
+  }
+})
+
 module.exports = route
